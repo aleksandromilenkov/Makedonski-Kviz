@@ -1,0 +1,122 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Macedonian Quiz</title>
+</head>
+<body>
+    <!-- top section -->
+    <div class="intro py-3 bg-white text-center"> <!-- intro e nasa klasa, py-3 znaci padding po Y oskata , bg-white znaci bela pozadina, i text center za centriranje znaci site klasi osven prvata se bootstrap klasi, a prvata klasa ke ja iskoristeme ponatamu za nasi celi-->
+        <div class="container"> <!-- isto i vaa e bootstrap klasa koja cuva sve vo centralna kolona -->
+             <h2 class="text-primary display-3 my-4" style="background: url(macedonia.png) no-repeat  200px 25px/80px; ">Macedonian Quiz</h2><!-- koristeme bootstrap klasi ,prvata text-primary dava plava boja, vtorata dava display tekst, i tretata znaci margini od ozgore nadole so strenght 4-->
+        </div>
+    </div>
+
+    <!-- result section -->
+    <div class="result py4 d-none bg-light text-center"> <!-- prvata klasa e nasha, vtorata e za padding po y oskata so sila 4, tretata klasa e vazna taa pravi rezultatot da ne se pojavuva na stranata(celiot div) , potoa cetvrtata e za pozadinska boja , i pettata za centar pozicija-->
+        <div class="container lead"> <!-- tuka imame container klasa ( za da go drzi divot vo sredina) i lead za stil-->
+            <p> ТИ СИ <span class="text-primary display-4 p-3">0%</span> МАКЕДОНЕЦ </p> <!-- vo span tagot se procentite-->
+        </div>
+    </div>
+    <!-- quiz section -->
+    <div class="quiz py-4 bg-primary"> <!-- prvata e nasha klasa, vtorata e padding ozgore nadole so strenght 4, tretata e za plava pozadinska boja-->
+        <div class="container"> <!-- isto da cuva sve u centralna kolona-->
+            <h2 class="my-5 text-white">Прашањата се основни, треба да ги знае секој Македонец</h2><!-- margina ozgore nadole so sila 5 , i boja na tekstot bela-->
+            <form action="" class="quiz-form text-light"> <!-- prvata e nasha klasa, vtorata e za boja na text-->
+                    <!-- PRVO PRASANJE:-->
+                    <div class="my-5"> <!-- ovde ke gi pravime prasanjata, tie imaat margina po y oskata so sila 5-->
+                        <p class="lead font-weight-normal ">1. Каде загинал Никола Карев - претседателот на првата република на Балканот?</p> <!-- ovde gi postavuvame prasanjata, tie imaat klasa lead koja im dava malku stil i font-weight normalen-->
+                        <div class="form-check my-2 text-white-50"> <!-- odgovorite ke bidat vo forma na radio-button, prvata klasa e  za malku stil, vtorata znaeme, i tretata e tekstot da bide bel no so prodzirnost pola , taka ke dava malku siva boja-->
+                            <input type="radio" name="q1" value="A" ><!-- sekoj answer ke ima ime so brojot na prasanjeto za koe se odnesuva, potoa value ke bide ili A ili b ili c.. znaci ova ke bide A zatoa sto e prv ponuden odgovor po A)-->
+                            <label class="form-check-label" style="color:white;">Дојранско</label>
+                        </div>
+                        <div class="form-check my-2 text-white-50"> <!-- Ova e vtoriot ponuden odgovor-->
+                            <input type="radio" name="q1" value="B" > <!-- sega imame value B, a imeto si ostanuva q1 zatoa sto uste sme na prvoto prasanje-->
+                            <label class="form-check-label"style="color:white;">Ениџе-Вардарско</label>
+                        </div>
+                        <div class="form-check my-2 text-white-50"> <!-- Ova e tretiot ponuden odgovor-->
+                            <input type="radio" name="q1" value="C" > <!-- sega imame value C, a imeto si ostanuva q1 zatoa sto uste sme na prvoto prasanje-->
+                            <label class="form-check-label" style="color:white;">Kочанско</label>
+                        </div>
+
+                        <input type="button" class="btn btn-light pomos" 
+                        value="ПОМОШ" id="pomos1" style="padding:2px; font-size: 0.9em; margin-top:20px;">
+                    
+                    </div>
+                    <div class="my-5"> <!-- VTORO PRASANJE-->
+                        <p class="lead font-weight-normal ">2. Кој од понудените НЕ е основач на првото ВМРО од 1893?</p>
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q2" value="A">
+                            <label class="form-check-label" style="color:white;">д-р. Христо Татарчев</label>
+                        </div>
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q2" value="B" >
+                            <label class="form-check-label" style="color:white;">Тодор Александров</label>
+                        </div>
+                        <div class="form-check my-2 text-white-50"> 
+                            <input type="radio" name="q2" value="C" > 
+                            <label class="form-check-label" style="color:white;">Даме Груев</label>
+                        </div>
+                        <input type="button" class="btn btn-light pomos" value="ПОМОШ"id="pomos2" style="padding:2px; font-size: 0.9em; margin-top:20px;">
+                    </div>
+                    <div class="my-5"> <!-- TRETO PRASANJE-->
+                        <p class="lead font-weight-normal ">3.Во која година избувнало Кресненското (Македонското) востание? </p>
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q3" value="A">
+                            <label class="form-check-label" style="color:white;">1903</label>
+                        </div>
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q3" value="B" >
+                            <label class="form-check-label" style="color:white;">1878</label>
+                        </div>
+                        <div class="form-check my-2 text-white-50"> 
+                            <input type="radio" name="q3" value="C" > 
+                            <label class="form-check-label" style="color:white;">1944</label>
+                        </div>
+                        <input type="button" class="btn btn-light pomos" value="ПОМОШ" id="pomos3"style="padding:2px; font-size: 0.9em; margin-top:20px;">
+                    </div>
+                    <div class="my-5"> <!-- CETVRTO PRASANJE-->
+                        <p class="lead font-weight-normal ">4. Во близина на кој Македонски град се наоѓа историското славно село Кутлеш? </p>
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q4" value="A">
+                            <label class="form-check-label" style="color:white;">Бер</label>
+                        </div>
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q4" value="B" >
+                            <label class="form-check-label" style="color:white;">Костур</label>
+                        </div>
+                        <div class="form-check my-2 text-white-50"> 
+                            <input type="radio" name="q4" value="C" > 
+                            <label class="form-check-label" style="color:white;">Лерин</label>
+                        </div>
+                        <input type="button" class="btn btn-light pomos" value="ПОМОШ" id="pomos4"style="padding:2px; font-size: 0.9em; margin-top:20px;">
+                    </div>
+                    <div class="my-5"> <!-- PETTO PRASANJE-->
+                        <p class="lead font-weight-normal ">5. Колкав дел од регионот Македонија зафаќа денешната Република Македонија? </p>
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q5" value="A">
+                            <label class="form-check-label" style="color:white;">75%</label>
+                        </div>
+                        <div class="form-check my-2 text-white-50">
+                            <input type="radio" name="q5" value="B" >
+                            <label class="form-check-label" style="color:white;">57%</label>
+                        </div>
+                        <div class="form-check my-2 text-white-50"> 
+                            <input type="radio" name="q5" value="C" > 
+                            <label class="form-check-label" style="color:white;">38%</label>
+                        </div>
+                        <input type="button" class="btn btn-light pomos" value="ПОМОШ" id="pomos5"style="padding:2px; font-size: 0.9em; margin-top:20px;">
+                    </div>
+                    
+
+                    <!-- Kopce Submit na krajot od quizot:-->
+                    <div class="text-center"> <!-- bootstrap klasa text-center-->
+                        <input type="submit" class="btn btn-light" value="Потврди"> <!-- bootstrap klasi za stil na kopceto-->
+                    </div>
+            </form>
+        </div>
+        </div>
+    <script src="app.js"></script>
+</body>
+</html>
